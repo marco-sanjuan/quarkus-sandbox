@@ -13,12 +13,16 @@ This is a sandbox project for playing with Quarkus.
 
 ##### Configuration:
   * It is stored in `application.properties` file.
-    * `greeting.message = Hello world!`
-    * This file can be:
+  
+    `greeting.message = Hello world!`
+    
+    This file can be:
       * inside the executable, in resources folder 
       * or outside, stored inside a `config/` folder next to executable.
   * can be override by **environment variable** (replace `.` by `_`):
-      * `export GREETING_MESSAGE="Ciao"`
+  
+    `export GREETING_MESSAGE="Ciao"`
+    
   * can also be override by **profile**: profile applied at startup will define the configuration to read:
     * ```
       greeting.message = Hello world!
@@ -30,24 +34,23 @@ This is a sandbox project for playing with Quarkus.
       `mvn quarkus:dev -Dquarkus-profile=myprofile`
        
   * can finally be override by execution **argument**, that prevails over others:
-        * `mvn quarkus:dev -Dgreeting.message=Hola`
+  
+    `mvn quarkus:dev -Dgreeting.message=Hola`
 
 
 
 <hr>
-<hr>
-<hr>
-<hr>
 
 
-## Running the application in dev mode
+
+#### Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
 ```
 ./mvnw quarkus:dev
 ```
 
-## Packaging and running the application
+#### Packaging and running the application
 
 The application can be packaged using `./mvnw package`.
 It produces the `quarkus-sandbox-1.0.0-SNAPSHOT-runner.jar` file in the `/target` directory.
@@ -57,7 +60,7 @@ The application is now runnable using
 
 `java -jar target/quarkus-sandbox-1.0.0-SNAPSHOT-runner.jar`
 
-## Creating a native executable
+#### Creating a native executable
 
 You can create a native executable using: 
 
