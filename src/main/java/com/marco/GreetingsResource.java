@@ -10,8 +10,8 @@ import javax.ws.rs.core.MediaType;
 @Path("/hello")
 public class GreetingsResource {
 
-    @ConfigProperty(name = "greeting",defaultValue = "Hello")
-    private String greeting;
+    @ConfigProperty(name = "greeting.message",defaultValue = "Hello")
+    String greeting;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)

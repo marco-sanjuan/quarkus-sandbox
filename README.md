@@ -7,11 +7,20 @@ This is a sandbox project for playing with Quarkus.
 * You can run Quarkus applications in a **GraalVM**, so it runs faster than in JVM.
 * You can also generate **native executables**, that runs faster than any other way.
 
-##### Develop phase
-* Run in dev mode:
-  * `mvn compile quarkus:dev`
+##### Developing
+* Run in dev mode: `mvn quarkus:dev`
 * **LiveReload**: you can change your java code and changes will be visible in your running application in real time.
-* Configuration is stored in `application.properties` file
+* Configuration:
+  * It is stored in `application.properties` file.
+    * `greeting.message = Hello world!`
+    * This file can be:
+      * inside the executable, in resources folder 
+      * or outside, stored inside a `config/` folder next to executable.
+  * can be override by **environment variable** (replace `.` by `_`):
+      * `export GREETING_MESSAGE="Ciao"`
+  * can also be override by **argument**, that prevails over others:
+    * `mvn quarkus:dev -Dgreeting.message=Hola` 
+  
 
 
 
