@@ -10,7 +10,8 @@ This is a sandbox project for playing with Quarkus.
 ##### Developing
 * Run in dev mode: `mvn quarkus:dev`
 * **LiveReload**: you can change your java code and changes will be visible in your running application in real time.
-* Configuration:
+
+##### Configuration:
   * It is stored in `application.properties` file.
     * `greeting.message = Hello world!`
     * This file can be:
@@ -18,10 +19,18 @@ This is a sandbox project for playing with Quarkus.
       * or outside, stored inside a `config/` folder next to executable.
   * can be override by **environment variable** (replace `.` by `_`):
       * `export GREETING_MESSAGE="Ciao"`
-  * can also be override by **argument**, that prevails over others:
-    * `mvn quarkus:dev -Dgreeting.message=Hola` 
-  
-
+  * can also be override by **profile**: profile applied at startup will define the configuration to read:
+    * ```
+      greeting.message = Hello world!
+      %dev.greeting.message = Hello dev world!
+      ``` 
+      Running `mvn quarkus:dev` will get `Hello dev world!`
+      
+      To activate other profile, use:
+      `mvn quarkus:dev -Dquarkus-profile=myprofile`
+       
+  * can finally be override by execution **argument**, that prevails over others:
+        * `mvn quarkus:dev -Dgreeting.message=Hola`
 
 
 
