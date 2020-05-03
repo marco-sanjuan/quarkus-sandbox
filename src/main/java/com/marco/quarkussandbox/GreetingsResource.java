@@ -1,4 +1,4 @@
-package com.marco;
+package com.marco.quarkussandbox;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 

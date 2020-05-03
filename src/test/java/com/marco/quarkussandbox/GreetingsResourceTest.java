@@ -1,4 +1,4 @@
-package com.marco;
+package com.marco.quarkussandbox;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Disabled;
