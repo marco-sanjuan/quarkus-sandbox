@@ -10,6 +10,9 @@ This is a sandbox project for playing with Quarkus.
 ##### Developing
 * Run in dev mode: `mvn quarkus:dev`
 * **LiveReload**: you can change your java code and changes will be visible in your running application in real time.
+* Quarkus extensions:
+  * `mvn quarkus:list-extensions` to see extensions list
+  * `mvn quarkus:add-extension -Dextensions="quarkus-resteasy-jsonb"` to add
 
 ##### Configuration:
   * It is stored in `application.properties` file.

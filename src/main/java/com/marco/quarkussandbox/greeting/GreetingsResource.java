@@ -1,6 +1,4 @@
-package com.marco.quarkussandbox;
-
-import com.marco.quarkussandbox.service.GreetingsGenerator;
+package com.marco.quarkussandbox.greeting;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
