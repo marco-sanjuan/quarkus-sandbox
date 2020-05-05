@@ -1,9 +1,14 @@
 package com.marco.quarkussandbox.person;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 public class Person {
 
+    @NotNull
     private String name;
     private String lastName;
+    @Min(18)
     private Integer age;
     private Boolean hasPet;
 
